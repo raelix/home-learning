@@ -1,0 +1,8 @@
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+welcome_credential.py
