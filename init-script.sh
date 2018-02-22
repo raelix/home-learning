@@ -1,16 +1,13 @@
 #!/bin/bash
 
-# Setting SSH server
+# Setup System
 echo "root:hammer" | chpasswd
-cp sshd_config /etc/ssh/
+cp system-config/sshd_config /etc/ssh/
+cp system-config/.pythonrc ~/.pythonrc
+cp system-config/.bashrc ~/.bashrc
 service ssh restart
 
-# Enable Python syntax completion 
-cp .pythonrc ~/.pythonrc
-cp .bashrc ~/.bashrc
-
 # Postgres init
-
 echo "Trying to wait postgres"
 until psql -h "db" -p 5432 -U "postgres" -c '\l'; do
   >&2 echo "Postgres is unavailable - sleeping"
