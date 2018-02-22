@@ -17,5 +17,5 @@ done
 
 psql -h "db" -U "postgres" -p 5432 -a -q -f database/tables.sql
 
-python home_learning/engine.py
+python home-learning/engine.py
 
