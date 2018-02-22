@@ -3,7 +3,7 @@ services:
 
   db:
     image: postgres
-    container_name: engine_db
+    container_name: db
     expose:
       - "5432"
 
@@ -12,13 +12,13 @@ services:
     container_name: engine 
     hostname: engine
     volumes:
-      - ./:/root/shared
+      - ./:/root/dev
     ports:
-      - "2222:22"
+      - "33:22"
       - "1900:1900/udp"
       - "52:52"
       - "52:52/udp"
-    working_dir: /root/shared
+    working_dir: /root/dev
     command: bash -c "./init-script.sh"
     links:
       - db

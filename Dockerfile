@@ -22,6 +22,5 @@ RUN apt-get update \
     && apt-get clean
 
 RUN apt-get install -f -y postgresql-client
-    #apt-get clean && rm -rf /tmp/* /var/tmp/*
 
 
