@@ -6,7 +6,7 @@ for container in $name; do
  echo ""
  echo "Stopping container $container..."
  docker stop "$container"
- echho "Removing container $container..."
+ echo "Removing container $container..."
  docker rm "$container"
 done
 
