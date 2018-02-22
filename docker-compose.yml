@@ -9,8 +9,8 @@ services:
 
   web:
     build: .
-    container_name: engine 
-    hostname: engine
+    container_name: home-learning 
+    hostname: home-learning
     volumes:
       - ./:/root/dev
     ports:
